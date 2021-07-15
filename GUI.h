@@ -15,6 +15,7 @@ private slots:
 	void penColor();
 	void penWidth();
 	void about();
+
 private:
 	// Function that creates the actions
 	void createActions();
@@ -45,6 +46,8 @@ private:
 	// Function that sets the initial state of the GUI
 	void setInitialState();
 public:
+
+	// Constructor for GUI class
 	GUI() {
 		setInitialState();
 	}

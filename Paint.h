@@ -4,7 +4,13 @@
 class PaintArea : public QWidget {
 	Q_OBJECT
 private:
+	// Function that draws a line to an end point
+	// endPoint - QPoint
 	void drawLineTo(const QPoint& endPoint);
+
+	// Function that resizes the image
+	// image - QImage*
+	// newSize - QSize
 	void resizeImage(QImage* image, const QSize& newSize);
 	bool modified;
 	bool drawing;
@@ -16,6 +22,8 @@ private:
 	// Function that sets the initial state of the paint area
 	void setInitialState();
 public:
+
+	// Constructor for PaintArea class
 	PaintArea() {
 		setInitialState();
 	}
@@ -45,6 +53,7 @@ public:
 
 	// Function that returns the pen width
 	int penWidth() const { return myPenWidth; }
+
 public slots:
 	void clearImage();
 protected:
